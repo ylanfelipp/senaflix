@@ -1,0 +1,274 @@
+* {
+    font-family: 'Kanit', sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #161A1D;
+    color: #E50914;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header h1 {
+    text-transform: uppercase;
+}
+
+nav a {
+    color: #FFFFFF;
+    font-weight: 300;
+    margin: 0.5em;
+    padding: 3px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #BA181B;
+    transition: all ease 300ms;
+}
+
+header button {
+    background-color: #161A1D;
+    color: #FFFFFF;
+    height: 40px;
+    width: 120px;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #660708;
+    transition: all ease 300ms;
+}
+
+main {
+    /* padding: 10px; */
+}
+
+main h2 {
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 5px;
+    border-left: 3px solid #E50914;
+}
+
+.cadastrar-filmes {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background-color: #FFFFFF;
+    width: 420px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+form input, textarea {
+    padding: 10px;
+    margin: 0.2em;
+    outline: none;
+    border-radius: 3px;
+    border: 2px solid #161A1D;
+}
+
+form input {
+    width: 400px;
+    height: 45px;
+}
+
+form textarea {
+    width: 400px;
+    resize: none;
+}
+
+form button[type="submit"]  {
+    background-color: #161A1D;
+    color: #FFFFFF;
+    font-size: 16px;
+    width: 400px;
+    margin: 1em;
+    padding: 5px;    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid;
+}
+
+
+form button[type="submit"]:hover {
+    background-color: #FFFFFF;
+    color: #161A1D;
+    transition: all ease 300ms;
+}
+
+.filmes {
+    display: flex;
+}
+
+.filmes .card-filme {
+    margin: 0.5em;
+}
+
+.card-filme {
+    background-color: #FEFEFE;
+    width: 150px;
+    height: 260px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid #660708;
+}
+.card-filme .filme {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-filme .filme .capa {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-filme .filme .descricao p {
+    margin: 0.1em;
+    font-size: 11px;
+}
+
+.buttons {
+    text-align: right;
+}
+
+.buttons i {
+    cursor: pointer;
+}
+
+.buttons i:nth-child(1) {
+    color: #b83c41;
+}
+
+
+.favoritos {
+    background-color: #f7f3ee;
+    position: absolute;
+    width: 200px;
+    height: 92%;
+    right: 0.1px;
+    bottom: 3px;
+    border: 2px dashed #b83c41;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateX(120%);
+    padding: 10px;
+}
+
+.card-favorito {
+    width: 170px;
+    height: 220px;
+    padding: 10px;
+    display: flex;
+    text-align: center;
+}
+.favorito {
+    background-color: #FFFFFF;
+    height: 100%;
+    font-size: 14px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card-favorito .favorito .capa {
+    width: 170px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.card-favorito .buttons {
+    color: #b83c41;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.wrapper {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 3px;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo-filme {
+    background-color: #FFFFFF;
+    width: 500px;
+    height: 470px;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.conteudo-filme .image {
+    width: 200px;
+}
+
+
+.conteudo-filme .image img {
+    width: 200px;
+    object-fit: cover;
+}
+
+.dados-filme {
+    display: flex;
+    align-items: center;
+}
+
+.dados-filme ul {
+    list-style: none;
+}
+
+.dados-filme ul li {
+    font-size: 18px;
+}
+
+.dados-filme ul h3 {
+    width: 100%;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 0.2em;
+}
+
+.conteudo-filme .sinopse {
+    font-size: 12px;
+    overflow: hidden;
+    text-align: justify;
+}
+
+.ocultar {
+    display: none;
+}
